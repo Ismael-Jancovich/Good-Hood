@@ -1,0 +1,176 @@
+body{
+    margin: 0%;
+    background-color: #C1C5CF
+}
+
+
+.header{
+    background: #7895B2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 197px;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.box__title{
+    display: flex;
+    margin: 40px 0px 15px 0px;
+}
+
+.box__title a {
+    margin: 0px 70px 0px 0px;
+    font-size: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+}
+
+.cuenta {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 30px 0px;
+    margin: 0px 45px 0px 0px;
+}
+
+.cuenta a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.frist__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px 0px 90px;
+    padding: 0px 0px 0px 10rem;
+    width: 1200px;
+    height: 500px;
+    background-color: #92b6c1a3
+}
+
+.frist__box h2 {
+    margin-right: 80px;
+    font-size: 70px;
+}
+
+.frist__box__img {
+    display: flex;
+    
+}
+.doble__img{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.frist__box__img__one{
+    width: 30%;
+height: 10%;
+}
+
+.frist__box__img__two{
+    height: 100%;
+    width: 30%;
+}
+
+.title__productos{
+    display: flex;
+    justify-content: center;
+}
+
+
+.carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.elemento{
+   flex: 1 0 auto;
+   margin: 0 50px;
+   width: 250px;
+   height: 250px;
+}
+
+.elemento img {
+    width: 250px;
+    height: 250px;
+}
+
+.elemento button {
+    width: 90px;
+    height: 45px;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+
+.three__box{
+    margin-top: 200px;
+}
+
+.three__box__contein{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.three__box__contein div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.three__box__contein img{
+   height: 500px;
+   width: 500px;
+}
+
+.footer {
+    width: 100%;
+    height: 15vh;
+    background-color: #7895B2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.four__box{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.four__box div{
+    margin: 0px 55px 0px 0px;
+}
+
+.five__box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.five__box div{
+    margin: 0px 55px 0px 0px;
+}

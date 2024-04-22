@@ -7,7 +7,7 @@ nombre varchar(100)
 );
 
 CREATE TABLE productos(
-id_producto INT NOT NULL PRIMARY KEY,
+id_producto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 id_categoria INT NOT NULL,
 nombre varchar(100),
 descripcion varchar(250),

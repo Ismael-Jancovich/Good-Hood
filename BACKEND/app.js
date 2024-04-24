@@ -29,6 +29,8 @@ app.post("/nuevo-usuario" , (request,response) =>{
    
 })
 
+
+
 app.get("/productos" , (resquest,response) =>{
 response.render("producto")
 })

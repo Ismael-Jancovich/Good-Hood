@@ -15,10 +15,16 @@ function getUserById(req, res) {
   }
 }
 
-function createUser(req, res) {
+async function createUser(req, res) {
   const newUser = req.body;
-  User.addUser(newUser);
-  res.status(201).json({ message: "User created" });
+  try{
+   const hashedPassword = bcrypt.hashSync(newUser.password, 10);
+   await User.create ({...newUser, password: hashedPassword});
+   res.status (201).json ({message: 'Usuario creado correctamente'})
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({message: 'Error inesperado en el servidor'})
+  };
 }
 
 function updateUser(req, res) {

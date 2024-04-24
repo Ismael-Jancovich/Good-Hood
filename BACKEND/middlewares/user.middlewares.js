@@ -1,11 +1,11 @@
 const { check, validationResult } = require("express-validator");
 
 const validateUser = [
-  check("username").notEmpty().withMessage("Name is required"),
-  check("email").isEmail().withMessage("Must be a valid email"),
+  check("username").notEmpty().withMessage("El nombre es requerido"),
+  check("email").isEmail().withMessage("Debe ser un correo electrónico válido"),
   check("password")
     .isLength({ min: 6 })
-    .withMessage("Password must be at least 6 characters long"),
+    .withMessage("La contraseña debe tener 6 o mas caracteres"),
   check("full_name").notEmpty(),
   (req, res, next) => {
     const errors = validationResult(req);
@@ -17,7 +17,7 @@ const validateUser = [
 ];
 
 const validateUserId = [
-  check("id").isUUID().withMessage("Must be a valid UUID"),
+  check("id").isUUID().withMessage("Debe ser un UUID válido"),
   (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -31,3 +31,4 @@ module.exports = {
   validateUser,
   validateUserId,
 };
+

@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../models/User").User;
 
 function getAllUsers(req, res) {
   const users = User.findAll();
@@ -7,7 +7,7 @@ function getAllUsers(req, res) {
 
 function getUserById(req, res) {
   const id = req.params.id;
-  const user = User.findByID(id);
+  const user = User.findByPK(id);
   if (user) {
     res.json(user);
   } else {

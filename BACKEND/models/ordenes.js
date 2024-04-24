@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     id_usuario: {
       type: DataTypes.INTEGREL,
       references: {
-        model: "user",
+        model: "users",
         key: "id_usuario"
       },
       fecha: DataTypes.DATETIME,

@@ -9,8 +9,6 @@ const users = require("./database/users.json");
 app.use(express.static("public"))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.set("view engine" , "ejs")
-app.set("views" , path.join(__dirname, "views"))
 
 
 app.get("/registro" , (resquest,response) =>{
@@ -34,7 +32,6 @@ app.post("/nuevo-usuario" , (request,response) =>{
 app.get("/productos" , (resquest,response) =>{
 response.render("producto")
 })
-
 
 app.post("/productos" , (resquest,response) =>{
     fs.writeFileSync(path.join(__dirname, "/database/productos.json") , JSON.stringify(users)) 

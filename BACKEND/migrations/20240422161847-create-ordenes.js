@@ -11,16 +11,15 @@ module.exports = {
       id_usuario: {
        type: Sequelize.INTEGER,
        references: {
-        model: "user",
+        model: "users",
         key: "id_usuario"
       },
       fecha: Sequelize.DATETIME,
-      total: Sequelize.DECIMAL(10, 2)
-      },
+      total: Sequelize.DECIMAL(10, 2),
 
       onUpdate: "CASCADE",
-      onDelete: "SET NULL",
-
+      onDelete: "SET NULL"
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

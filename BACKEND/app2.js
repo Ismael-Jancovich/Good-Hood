@@ -17,7 +17,7 @@ const registerUser = async (req, res) => {
 const loginUser = async(req, res) => {
     const {username, password} = req.body;
     try {
-        const user = await user.findOne({where: {username} });
+        const user = await User.findOne({where: {username} });
         if (!user) {
             return res.status(404).json({message: "Usuario no encontrado"});
         }
@@ -31,5 +31,3 @@ const loginUser = async(req, res) => {
         res.status(500).json ({message: "Error inesperado en el servidor"})
     }
 };
-
-router.post('', validateUserId, loginUser);

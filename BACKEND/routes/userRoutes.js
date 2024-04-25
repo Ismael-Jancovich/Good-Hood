@@ -1,5 +1,4 @@
 const express = require("express");
-const middlewares = require('../middlewares/user.middlewares')
 const {
   createUser,
   getAllUsers,

@@ -28,9 +28,11 @@ module.exports = {
           model: "categorias",
           key: "id_categoria",
         },
+      },
 
-        onUpdate: "CASCADE",
-        onDelete: "SET NULL",
+      onUpdate: "CASCADE",
+      onDelete: "SET NULL",
+
 
         createdAt: {
           allowNull: false,
@@ -40,7 +42,7 @@ module.exports = {
           allowNull: false,
           type: Sequelize.DATE
         }
-      }
+
     });
   },
   async down(queryInterface, Sequelize) {

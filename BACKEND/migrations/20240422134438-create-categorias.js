@@ -9,10 +9,6 @@ module.exports = {
         primaryKey: true
       },
       nombre: Sequelize.STRING(100),
-            createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
 
       createdAt: {
         allowNull: false,

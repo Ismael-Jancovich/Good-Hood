@@ -14,13 +14,14 @@ module.exports = {
         model: "users",
         key: "id_usuario"
       },
-      fecha: Sequelize.DATETIME,
-      total: Sequelize.DECIMAL(10, 2),
+    },
+    fecha: Sequelize.DATETIME,
+    total: Sequelize.DECIMAL(10, 2),
 
-      onUpdate: "CASCADE",
-      onDelete: "SET NULL"
-      },
-      createdAt: {
+    onUpdate: "CASCADE",
+    onDelete: "SET NULL",
+    
+    createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },

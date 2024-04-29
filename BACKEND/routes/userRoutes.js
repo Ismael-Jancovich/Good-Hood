@@ -16,4 +16,3 @@ router.put("/:idUsuario", validateUser, updateUser);
 router.delete("/:idUsuario", deleteUser);
 
 module.exports = router;
-  

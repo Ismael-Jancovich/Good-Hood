@@ -4,8 +4,8 @@ const bcrypt = require('bcrypt');
 async function createUser(req, res) {
   const newUser = req.body;
   try{
-   const hashedPassword = await bcrypt.hash(newUser.password, 10);
-   await User.create({...newUser, password: hashedPassword});
+   const hashedPassword = await bcrypt.hash(newUser.contraseña, 10);
+   await User.create({...newUser, contraseña: hashedPassword});
    res.status (201).json ({message: 'Usuario creado correctamente'})
   } catch (error) {
     console.log(error);
@@ -16,7 +16,7 @@ async function createUser(req, res) {
 function getAllUsers(req, res) {
   const users = User.findAll();
   res.json(users);
-}
+} 
 
 function getUserById(req, res) {
   const id = req.params.id;

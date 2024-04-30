@@ -29,12 +29,10 @@ module.exports = {
           key: "id_categoria",
         },
       },
-
-      onUpdate: "CASCADE",
-      onDelete: "SET NULL",
-
-
-        createdAt: {
+    
+            onUpdate: "CASCADE",
+            onDelete: "SET NULL",
+      createdAt: {
           allowNull: false,
           type: Sequelize.DATE
         },

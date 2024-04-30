@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     contraseña: {
-      type: DataTypes.STRING(16),
+      type: DataTypes.STRING(50),
       allowNull: false
     },  
     usuario: {

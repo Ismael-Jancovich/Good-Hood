@@ -14,15 +14,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       autoIncrement: true
     },
+
     nombre: {
       type: DataTypes.STRING(100),
       allowNull: false
     },
+
     descripcion: DataTypes.STRING(250),
     precio: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false
     },
+
     id_categoria: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -31,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         key: "id_categoria"
       }
     }
+    
   }, {
     sequelize,
     modelName: 'Product',

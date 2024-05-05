@@ -1,8 +1,8 @@
 const { check, validationResult } = require("express-validator");
-const bcrypt = require('bcrypt');
 
 const validateUser = [
   check("nombre").notEmpty().withMessage("El nombre es requerido"),
+  check("apellido").notEmpty().withMessage("El apellido es requerido"),
   check("mail").isEmail().withMessage("Debe ser un correo electrónico válido"),
   check("contraseña")
     .isLength({ min: 6, max: 50 })

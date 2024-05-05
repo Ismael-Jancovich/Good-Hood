@@ -1,5 +1,4 @@
-DROP DATABASE good_hood_db;
-CREATE DATABASE good_hood_db;
+    CREATE DATABASE good_hood_db;
 USE good_hood_db;
 
 CREATE TABLE categorias(
@@ -7,17 +6,14 @@ id_categoria int not null primary key,
 nombre varchar(100)
 );
 
-
 CREATE TABLE productos(
-categoriasproductsproductsid_producto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_producto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 id_categoria INT NOT NULL,
-nombre varchar(100) NOT NULL,
+nombre varchar(100),
 descripcion varchar(250),
-precio decimal(10,2) NOT NULL,
+precio decimal(10,2),
 FOREIGN KEY (id_categoria) REFERENCES categorias (id_categoria)
 );
-
-SELECT * FROM products;
 
 CREATE TABLE usuarios(
 id_usuario int not null primary key,
@@ -37,7 +33,6 @@ fecha DATETIME,
 total decimal(10,2),
 FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
 );
-
 
 CREATE TABLE detalles(
 id_detalles int not null primary key,

@@ -7,9 +7,6 @@ import Navbar from "./src/components/navbar";
 function App() {
     return (
       <>
-        <Helmet>
-          <link rel="stylesheet" href="/src/styles/reset.css" />
-        </Helmet>
         <Navbar />
       </>
     );

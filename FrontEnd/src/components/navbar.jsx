@@ -1,111 +1,144 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import styled from "styled-components";
+import { RxHamburgerMenu } from "react-icons/rx";
 
-const HeaderContainer = styled.header`
-body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #afc2d9;
-}
-
-nav {
+const NavContainer = styled.nav`
   background-color: #1672cd;
-  height: 170px;
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.enlace {
+  justify-content: space-between;
+  flex-direction: row;
   padding: 0px 50px;
-}
+  min-height: 66px;
+`;
 
-.logo {
-  height: 150px;
-  border-radius: 75px;
-}
-
-.sesion {
-  display: flex;
-  align-items: center;
-  float: left;
-  padding: 0px 30px 0px 0px;
-}
-
-.sesion ul li a {
-  font-size: 18px;
-}
-
-.sesion ion-icon {
-  font-size: 64px;
-  cursor: pointer;
-  border-radius: 30px;
-  margin-left: 70px;
-}
-
-
-nav ul {
+const ListContentDesktop = styled.ul`
+  display: none;
+  list-style: none;
   margin-right: 20px;
   margin-left: 20px;
-}
 
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0px 30px 0px 0px;
-}
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
-nav ul li a{
-  font-size: 25px;
-  color: white;
-  text-transform: uppercase;
-}
+  li {
+    line-height: 80px;
+    margin: 0px 30px 0px 0px;
 
-.enlace__sesion
-li
-a {
-  color: #fff;
-  font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 10px;
-  text-transform: uppercase;
-}
+    a {
+      font-size: 25px;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      &.active,
+      &:hover {
+        background-color: #000090;
+        transition: 0.5s;
+      }
+    }
+  }
+`;
 
-li a.active,
-li a:hover {
-  background-color: #000090;
-  transition: 0.5s;
-}
-
-.accont {
+const ListContentMobile = styled.ul`
   display: flex;
-}
+  flex-direction: column;
+  list-style: none;
+  margin-right: 20px;
+  margin-left: 20px;
 
+  @media (min-width: 768px) {
+    display: none;
+  }
 
-.checkbtn {
-  font-size: 30px;
-  color: #fff;
-  float: right;
-  line-height: 140px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
+  li {
+    line-height: 80px;
+    margin: 0px 30px 0px 0px;
 
-#check {
-  display: none;
-}
-`
+    a {
+      font-size: 25px;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      &.active,
+      &:hover {
+        background-color: #000090;
+        transition: 0.5s;
+      }
+    }
+  }
+`;
+
+const ButtonMenuMobile = styled.div`
+  display: block;
+  background-color: #1672cd;
+  padding: 0.5rem;
+
+  svg {
+    font-size: 30px;
+    color: white;
+  }
+
+  &:hover {
+    background-color: white;
+    border-radius: 10px;
+
+    svg {
+      color: #1672cd;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const MenuMobileActive = styled.div`
+  display: ${({ active }) => (active ? "block" : "none")};
+  width: 100%;
+  background-color: #1672cd;
+  z-index: 1000;
+`;
 
 function Navbar() {
-    return (
-      <HeaderContainer>
+  const [active, setActive] = useState(false);
 
-      </HeaderContainer>
-    )
-  }
+  const handleClick = () => {
+    setActive(!active);
+  };
+  return (
+    <>
+      <NavContainer>
+        <div>LOGO</div>
+        <ListContentDesktop>
+          <li>
+            <a href="/" className="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ListContentDesktop>
+        <ButtonMenuMobile onClick={handleClick}>
+          <RxHamburgerMenu />
+        </ButtonMenuMobile>
+      </NavContainer>
+      <MenuMobileActive active={active}>
+        <ListContentMobile>
+          <li>
+            <a href="/" className="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ListContentMobile>
+      </MenuMobileActive>
+    </>
+  );
+}
 
   export default Navbar

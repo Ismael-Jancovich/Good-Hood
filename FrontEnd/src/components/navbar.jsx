@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import styled from "styled-components";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NavContainer = styled.nav`
   background-color: #1672cd;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   padding: 0px 50px;
   min-height: 66px;
 `;
+
+const CartNavbar = styled.div`
+display: flex;
+align-items: center;
+font-size: 35px;
+`
 
 const ListContentDesktop = styled.ul`
   display: none;
@@ -110,16 +117,49 @@ function Navbar() {
   return (
     <>
       <NavContainer>
-        <div>LOGO</div>
+        <div>
+        <Link to={`/`} className="menu">
+          <img src="./images/logo.jpg" alt="logo de la pagina" />
+          </Link>
+          </div>
         <ListContentDesktop>
+
           <li>
+          <Link to={`/hombre`} className="menu">
             <a href="/" className="active">
-              Home
+              Hombre
             </a>
+            </Link>
           </li>
+
+          <Link to={`/mujer`} className="menu">
           <li>
-            <a href="/about">About</a>
+            <a href="/">Mujer</a>
           </li>
+          </Link>
+
+          <Link to={`/niño-a`} className="menu">
+          <li>
+            <a href="/">Niño/a</a>
+          </li>
+          </Link>
+
+          <Link to={`/login`} className="menu">
+          <li>
+            <a href="/">Iniciar sesion</a>
+          </li>
+          </Link>
+          
+          <Link to={`/register`} className="menu">
+          <li>
+            <a href="/">Registrarse</a>
+          </li>
+          </Link>
+
+        <CartNavbar>
+          <FaShoppingCart/>
+        </CartNavbar>
+
         </ListContentDesktop>
         <ButtonMenuMobile onClick={handleClick}>
           <RxHamburgerMenu />
@@ -129,11 +169,33 @@ function Navbar() {
         <ListContentMobile>
           <li>
             <a href="/" className="active">
-              Home
+              Hombre
             </a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/" className="active">
+              Mujer
+            </a>
+          </li>
+          <li>
+            <a href="/about">
+            Niño/a
+              </a>
+          </li>
+          <li>
+            <a href="/" className="active">
+              Iniciar Sesion
+            </a>
+          </li>
+          <li>
+            <a href="/" className="active">
+              Registrarse
+            </a>
+          </li>
+          <li>
+            <a href="/" className="active">
+              Carrito
+            </a>
           </li>
         </ListContentMobile>
       </MenuMobileActive>

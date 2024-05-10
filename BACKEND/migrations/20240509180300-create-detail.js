@@ -2,42 +2,36 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('detalles', {
-
+    await queryInterface.createTable('Detail', {
       id_detalles: {
-        type: Sequelize.INTEGREL,
+        type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true
       },
 
-      id_prodcuto: {
-        type: Sequelize.INTEGREL,
+      id_products: {
+        type: Sequelize.INTEGER,
         references: {
-          model: "producto",
+          model: "products",
           key: "id_producto"
         }
       },
 
       id_orden: {
-        type: Sequelize.INTEGREL,
+        type: Sequelize.INTEGER,
         references: {
-          model: "orden",
+          model: "order",
           key: "id_orden"
         }
 
       },
-
-      cantidad: Sequelize.INTEGREL,
+      cantidad: Sequelize.INTEGER,
       precio: Sequelize.DECIMAL(10, 2),
-
-      onUpdate: "CASCADE",
-      onDelete: "SET NULL",
 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -45,6 +39,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('detalles');
+    await queryInterface.dropTable('Detail');
   }
 };

@@ -1,42 +1,45 @@
-const Product = require("../models/product").Product;
+const Product = require("../models").Product;
 
-function getAllProducts(req, res) {
-  const product = Product.findAll();
-  res.json(product);
-}
-
-function getProductById(req, res) {
-  const id = req.params.id;
-  const product = Product.findByPK(id);
-  if (product) {
-    res.json(product);
-  } else {
-    res.status(404).json({ message: "Product not found" });
+const addProducts = async (req, res) => {
+  try {
+    const { nombre, precio, id_categoria, descripcion } = req.body;
+    const user = await Product.create({ nombre, precio, id_categoria, descripcion }); 
+    res.json({ msg: "Producto agregado exitosamente", data: user });
+  } catch (error) {
+    console.log(error)
   }
 }
-function createProduct(req, res) {
-  const newProduct = req.body;
-  Product.addProduct(newProduct);
-  res.status(201).json({ message: "Product created" });
+
+const getProducts = async (req, res) => {
+  const products = await Product.findAll();
+  res.json({ msg: "Productos", data: products });
 }
 
-function updateProduct(req, res) {
-  const id = req.params.id;
-  const updatedProduct = req.body;
-  Product.update(id, updatedProduct);
-  res.json({ message: "Product updated" });
+const getProductById = async (req, res) => {
+  const { id } = req.params;
+  const product = await Product.findByPk(id);
+  res.json({ msg: `Producto con id ${id}`, data: product });
 }
 
-function deleteProduct(req, res) {
-  const id = req.params.id;
-  Product.delete(id);
-  res.json({ message: "Product deleted" });
+const updateProduct = async (req, res) => {
+  const { id } = req.params;
+  const product = req.body;
+  await Product.update(product, {
+    where: {
+      id_product: id
+    }
+  });
+  res.json({ msg: "Producto actualizado correctamente" });
 }
 
+const deleteProduct = async (req, res) => {
+  const { id } = req.params;
+  await Product.destroy({ where: { id_product: id } });
+  res.json({ msg: "Producto eliminado correctamente" });
+}
 module.exports = {
-  getAllProducts,
-  getProductById,
-  createProduct,
-  updateProduct,
-  deleteProduct,
-};
+   addProducts,
+   getProducts,
+    getProductById, 
+    updateProduct,
+     deleteProduct };

@@ -189,15 +189,6 @@ li a:hover {
 }
 
 
-.botones__compra__oferta button{
-    margin: 5px 10px 0px 0px;
-    width: 80px;
-}
-
-.botones__compra__oferta button ion-icon{
-    font-size: 24px;
-}
-
 
 .tarjetas{
     display: flex;

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "lolasosql1.2",
-    "database": "good_hood_db",
+    "database": "good_hood",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

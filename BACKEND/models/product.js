@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
 
     static associate(models) {
-      Product.belongsTo(models.Categorias, { foreignKey: "id_categoria" })
+      Product.belongsTo(models.categories, { foreignKey: "id_categoria" })
     }
   }
   Product.init({
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "categoria",
+        model: "categories",
         key: "id_categoria"
       }
     }

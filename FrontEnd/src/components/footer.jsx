@@ -44,7 +44,6 @@ ul{
 }
 `
 
-
 const FooterNetworks = styled.div`
 color: white;
 font-size: 50px ;

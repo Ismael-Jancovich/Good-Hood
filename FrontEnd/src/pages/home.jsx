@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const HomeCointaner = styled.div`
 display: flex;
@@ -105,6 +106,7 @@ const TarjetsSection = styled.div`
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .tarjetas div{
@@ -141,24 +143,24 @@ const Home = () => {
                         <h2>vestite a la  moda</h2>
                     </div>
 
-                    <div class="moda__imagenes">
-                        <img src="" alt="" />
-                        <img src="" alt="" />
+                    <div className="moda__imagenes">
+                        <img src="https://i.pinimg.com/564x/a8/9a/cc/a89acc2e5f207007edb35d0a867f3171.jpg" alt="" />
+                        <img src="https://i.pinimg.com/564x/2d/a4/b7/2da4b7590c72c4195c62405f7cffd5c2.jpg" alt="" />
                     </div>
                 </section>
             </HomeWelcome>
             <HomeOferts>
-                <section class="ofertas">
+                <section className="ofertas">
                     <div>
-                        <h2>Prendas en ofertas</h2>
+                        <h2>Prendas</h2>
                     </div>
 
-                    <section class="carrusel">
-                        <button class="flechas">flechas</button>
-                        <section class="carrusel__prendas">
-                            <div class="img__carrusel__one">
+                    <section className="carrusel">
+                        <button className="flechas">flechas</button>
+                        <section className="carrusel__prendas">
+                            <div className="img__carrusel__one">
                                 <img src="" alt="" />
-                                <div class="botones__compra__oferta">
+                                <div className="botones__compra__oferta">
                                     <button>Ver Mas</button>
                                     <button>
                                         <CartNavbar>
@@ -167,9 +169,9 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="img__carrusel__two">
+                            <div className="img__carrusel__two">
                                 <img src="" alt="" />
-                                <div class="botones__compra__oferta">
+                                <div className="botones__compra__oferta">
                                     <button>Ver Mas</button>
                                     <button>
                                         <CartNavbar>
@@ -178,9 +180,9 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="img__carrusel__three">
+                            <div className="img__carrusel__three">
                                 <img src="" alt="" />
-                                <div class="botones__compra__oferta">
+                                <div className="botones__compra__oferta">
                                     <button>Ver Mas</button>
                                     <button>
                                         <CartNavbar>
@@ -189,9 +191,9 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="img__carrusel__four">
+                            <div className="img__carrusel__four">
                                 <img src="" alt="" />
-                                <div class="botones__compra__oferta">
+                                <div className="botones__compra__oferta">
                                     <button>Ver Mas</button>
                                     <button>
                                         <CartNavbar>
@@ -200,9 +202,9 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="img__carrusel__five">
+                            <div className="img__carrusel__five">
                                 <img src="" alt="" />
-                                <div class="botones__compra__oferta">
+                                <div className="botones__compra__oferta">
                                     <button>Ver Mas</button>
                                     <button>
                                         <CartNavbar>
@@ -212,32 +214,38 @@ const Home = () => {
                                 </div>
                             </div>
                         </section>
-                        <button class="flechas">flechas</button>
+                        <button className="flechas">flechas</button>
                     </section>
                 </section>
 
             </HomeOferts>
             <TarjetsSection>
-            <section class="tarjetas">
-        <div class="tarjeta__hombre">
-            <a href="./vinculos/hombre.html">
-                <img src="./fotos/fotos secciones/580946c560db88ea4f4825702f10de8e.jpg" alt="hombre posando"/>
-                <p>Hombre</p>
-            </a>
-        </div>
-        <div class="tarjeta__niño/a">
-            <a href="./vinculos/niños.html">
-                <img src="./fotos/fotos secciones/niñopopsando.jpg" alt="niño posando" />
-                <p>Niño/a</p>
-            </a>
-        </div>
-        <div class="tarjeta__mujer">
-            <a href="./vinculos/mujer.html">
-                <img src="./fotos/fotos secciones/mujer posando.jpg" alt="mujer posando"/>
-                <p>Mujer</p>
-            </a>
-        </div>
-    </section>
+                <section className="tarjetas">
+                    <div className="tarjeta__hombre">
+                <Link to={`/hombre`} className="menu">
+                        <a href="./vinculos/hombre.html">
+                            <img src="https://i.pinimg.com/736x/08/2b/f6/082bf69e0b39fbb68cfa0f8b6df06931.jpg" alt="hombre posando" />
+                            <p>Hombre</p>
+                        </a>
+                        </Link>
+                    </div>
+                    <div className="tarjeta__niño/a">
+                    <Link to={`/niño-a`} className="menu">
+                        <a href="./vinculos/niños.html">
+                            <img src="https://i.pinimg.com/736x/cd/f0/91/cdf091c5731affb37e58f34d43819f8e.jpg" alt="mujer posando" />
+                            <p>Niño/a</p>
+                        </a>
+                    </Link>
+                    </div>
+                    <div className="tarjeta__mujer">
+                    <Link to={`/mujer`} className="menu">
+                        <a href="./vinculos/mujer.html">
+                            <img src="https://www.shutterstock.com/image-photo/fashionable-confident-woman-wearing-elegant-600nw-2255732941.jpg" alt="niño posando" />
+                            <p>Mujer</p>
+                        </a>
+                    </Link>
+                    </div>
+                </section>
             </TarjetsSection>
         </HomeCointaner>
     )

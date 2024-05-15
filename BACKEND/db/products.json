@@ -1,170 +1,170 @@
 [
   {
     "image": "https://acdn.mitiendanube.com/stores/145/898/products/1111-a1d9aee1a2df41d9ab16940391787173-640-0.webp",
-    "category": "Hombre",
-    "name": "Short Nike",
-    "price": "$5000",
+    "modelo": "Hombre",
+    "nombre": "Short Nike",
+    "precio": "$5000",
     "id": "32e7ecdb-bee5-43c3-9f9d-a6bdad244f6c"
   },
   {
     "image": "https://newsport.vtexassets.com/arquivos/ids/18794846-1200-auto?v=638465521299800000&width=1200&height=auto&aspect=true",
-    "category": "Hombre",
-    "name": "Camperon AFA",
-    "price": "$200000",
+    "modelo": "Hombre",
+    "nombre": "Camperon AFA",
+    "precio": "$200000",
     "id": "b14d7f35-cdfc-4552-ade6-5a50ffdf51ba"
   },
   {
     "image": "https://cdn-images.farfetch-contents.com/17/08/95/92/17089592_34723812_600.jpg",
-    "category": "Hombre",
-    "name": "New Balance 550",
-    "price": "$150000",
+    "modelo": "Hombre",
+    "nombre": "New Balance 550",
+    "precio": "$150000",
     "id": "f6abd4a4-dbea-437e-8496-1c3f7d442aa5"
   },
   {
     "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/09c5ea6df1bd4be6baaaac5e003e7047_9366/Zapatillas_Forum_Low_Blanco_FY7756_01_standard.jpg",
-    "category": "Hombre",
-    "name": "Forum Low",
-    "price": "$120000",
+    "modelo": "Hombre",
+    "nombre": "Forum Low",
+    "precio": "$120000",
     "id": "3a30a83c-fb96-4529-918f-afe9ad72e49d"
   },
   {
     "image": "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw24b154e3/products/AD_H06660/AD_H06660-1.JPG",
-    "category": "Hombre",
-    "name": "Buzo Adidas Originals",
-    "price": "$50000",
+    "modelo": "Hombre",
+    "nombre": "Buzo Adidas Originals",
+    "precio": "$50000",
     "id": "922fdb93-f80e-49d7-844b-e9290cfe1d91"
   },
   {
     "image": "https://woker.vtexassets.com/arquivos/ids/419643-800-800?v=638382508878830000&width=800&height=800&aspect=true",
-    "category": "Hombre",
-    "name": "Remera Lacoste",
-    "price": "$8300",
+    "modelo": "Hombre",
+    "nombre": "Remera Lacoste",
+    "precio": "$8300",
     "id": "88c9704d-c284-443d-bac3-9bde62094c2a"
   },
   {
     "image": "https://acdn.mitiendanube.com/stores/001/490/877/products/hoodie-2-negro-adelante-web-fa468c65b5f1350c7917007697758675-480-0.jpg",
-    "category": "Hombre",
-    "name": "Undefined hoodie",
-    "price": "$67000",
+    "modelo": "Hombre",
+    "nombre": "Undefined hoodie",
+    "precio": "$67000",
     "id": "a074407d-cb4d-4f26-9083-493efd1fac8e"
   },
   {
     "image": "https://essential.vtexassets.com/arquivos/ids/1094111-800-auto?v=638367579178030000&width=800&height=auto&aspect=true",
-    "category": "Hombre",
-    "name": "Camisa Adidas Originals",
-    "price": "$72000",
+    "modelo": "Hombre",
+    "nombre": "Camisa Adidas Originals",
+    "precio": "$72000",
     "id": "9ffab09e-9c74-4cfb-b286-de567c513d07"
   },
   {
     "image": "https://marathon.vtexassets.com/arquivos/ids/270697-800-auto?v=638213190939900000&width=800&height=auto&aspect=true",
-    "category": "Hombre",
-    "name": "Hunder Bermuda",
-    "price": "$12600",
+    "modelo": "Hombre",
+    "nombre": "Hunder Bermuda",
+    "precio": "$12600",
     "id": "5edc12dc-425e-4cb1-a85b-a1e72bcf05df"
   },
   {
     "image": "https://acdn.mitiendanube.com/stores/887/995/products/sin-tituglo-111-cbe33d2dc54d9fc34f16214385274040-1024-1024.jpg",
-    "category": "Hombre",
-    "name": "Chomba Lacoste",
-    "price": "$130000",
+    "modelo": "Hombre",
+    "nombre": "Chomba Lacoste",
+    "precio": "$130000",
     "id": "80fed283-489b-4c4d-bd4d-07d2337e3f1f"
   },
   {
     "image": "https://www.digitalsport.com.ar/files/products/61a8fa4976f53-467381-500x500.jpg",
-    "category": "Hombre",
-    "name": "Campera Swoosh Nike",
-    "price": "$150000",
+    "modelo": "Hombre",
+    "nombre": "Campera Swoosh Nike",
+    "precio": "$150000",
     "id": "28e57534-a6c0-4555-a337-52a2cbe1fb6c"
   },
   {
     "image": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwf80f966e/products/UA_1326537-003/UA_1326537-003-1.JPG",
-    "category": "Hombre",
-    "name": "Musculosa Hunder Negra",
-    "price": "$9000",
+    "modelo": "Hombre",
+    "nombre": "Musculosa Hunder Negra",
+    "precio": "$9000",
     "id": "59c6c22f-273b-4dd2-bdb6-69c9e39204ae"
   },
   {
     "image": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwf5f3fc1e/products/NIDX9176-102/NIDX9176-102-1.JPG",
-    "category": "Mujer",
-    "name": "Gamma Force",
-    "price": "$190000",
+    "modelo": "Mujer",
+    "nombre": "Gamma Force",
+    "precio": "$190000",
     "id": "ef216371-91f1-4e4d-a995-615303ad154a"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/311576-1200-1200?width=1200&height=1200&aspect=true",
-    "category": "Mujer",
-    "name": "Phoenix Fleece",
-    "price": "$90000",
+    "modelo": "Mujer",
+    "nombre": "Phoenix Fleece",
+    "precio": "$90000",
     "id": "50fd3334-3cf8-4d8e-ae35-0e0e2095e1a7"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/812254-1200-1200?width=1200&height=1200&aspect=true",
-    "category": "Mujer",
-    "name": "Jordan Sport",
-    "price": "$100000",
+    "modelo": "Mujer",
+    "nombre": "Jordan Sport",
+    "precio": "$100000",
     "id": "92f055bf-2742-4a23-a6c4-a6be77d70e57"
   },
   {
     "image": "https://newsport.vtexassets.com/arquivos/ids/18826270-1200-auto?v=638477610113330000&width=1200&height=auto&aspect=true",
-    "category": "Mujer",
-    "name": "Buzo Undefined Hoodie",
-    "price": "$90000",
+    "modelo": "Mujer",
+    "nombre": "Buzo Undefined Hoodie",
+    "precio": "$90000",
     "id": "0c96aa45-d268-4733-9c73-b34bb009d546"
   },
   {
     "image": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwe1084011/products/NIDD5975-200/NIDD5975-200-1.JPG",
-    "category": "Mujer",
-    "name": "Pantalon Urbano Nike",
-    "price": "$70000",
+    "modelo": "Mujer",
+    "nombre": "Pantalon Urbano Nike",
+    "precio": "$70000",
     "id": "b1aa6c81-d471-4c53-a52a-efa6ba1eb5f4"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/722939-1200-1200?width=1200&height=1200&aspect=true",
-    "category": "Mujer",
-    "name": "Nike Dri-FIT",
-    "price": "$40000",
+    "modelo": "Mujer",
+    "nombre": "Nike Dri-FIT",
+    "precio": "$40000",
     "id": "9d6b65bd-4203-4bcd-b21b-7d38a3598259"
   },
   {
     "image": "https://newsport.vtexassets.com/arquivos/ids/18810133-1200-auto?v=638472271518900000&width=1200&height=auto&aspect=true",
-    "category": "Mujer",
-    "name": "Adidas Originals Handball",
-    "price": "$190000",
+    "modelo": "Mujer",
+    "nombre": "Adidas Originals Handball",
+    "precio": "$190000",
     "id": "2f7d7651-cfad-4044-8fda-fe68dfc15edb"
   },
   {
     "image": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw0e42986f/products/AD_BQ1968/AD_BQ1968-1.JPG",
-    "category": "Mujer",
-    "name": "Campera adidas",
-    "price": "$160000",
+    "modelo": "Mujer",
+    "nombre": "Campera adidas",
+    "precio": "$160000",
     "id": "df2ea007-4169-480e-bd72-c2d2f041ca21"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/790322-1200-1200?width=1200&height=1200&aspect=true",
-    "category": "Mujer",
-    "name": "Nike Dri-FIT Academy",
-    "price": "$40000",
+    "modelo": "Mujer",
+    "nombre": "Nike Dri-FIT Academy",
+    "precio": "$40000",
     "id": "4d0896c6-7b47-4523-aa14-de84de580e32"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/733950-1200-1200?width=1200&height=1200&aspect=truee",
-    "category": "Mujer",
-    "name": "Short Jordan",
-    "price": "$90000",
+    "modelo": "Mujer",
+    "nombre": "Short Jordan",
+    "precio": "$90000",
     "id": "0711adba-be03-40b3-b892-da5131e66775"
   },
   {
     "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8767d666de0a463092e3ca57c38a7e69_9366/CAMPUS_00s_W_Beige_IE5588_01_standard.jpg",
-    "category": "Mujer",
-    "name": "CAMPUS 00S W",
-    "price": "$180000",
+    "modelo": "Mujer",
+    "nombre": "CAMPUS 00S W",
+    "precio": "$180000",
     "id": "b6f8021a-899a-4301-b690-47135eb0eb4a"
   },
   {
     "image": "https://nikearprod.vtexassets.com/arquivos/ids/597393-1200-1200?width=1200&height=1200&aspect=true",
-    "category": "Mujer",
-    "name": "Nike Sportswear Circa 96",
-    "price": "$160000",
+    "modelo": "Mujer",
+    "nombre": "Nike Sportswear Circa 96",
+    "precio": "$160000",
     "id": "383904c7-3f49-4288-8dc6-52e8ed331f5e"
   }
 ]

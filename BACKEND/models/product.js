@@ -14,7 +14,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       autoIncrement: true
     },
-
+    image: {
+      type: DataTypes.STRING(255),
+      allownull: false,
+    },
+modelo:{
+ type: DataTypes.STRING(255),
+},
     nombre: {
       type: DataTypes.STRING(100),
       allowNull: false

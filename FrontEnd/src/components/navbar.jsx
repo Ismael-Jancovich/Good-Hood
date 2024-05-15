@@ -12,6 +12,11 @@ const NavContainer = styled.nav`
   flex-direction: row;
   padding: 0px 50px;
   min-height: 66px;
+
+  img{
+    border-radius: 50%;
+    width: 200px;
+  }
 `;
 
 const CartNavbar = styled.div`
@@ -119,7 +124,7 @@ function Navbar() {
       <NavContainer>
         <div>
         <Link to={`/`} className="menu">
-          <img src="./images/logo.jpg" alt="logo de la pagina" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8sTNg_Wuf6Ze67SqR4m4kzy5erMo5S89LMBwQBDEiA&s" alt="logo de la pagina" />
           </Link>
           </div>
         <ListContentDesktop>

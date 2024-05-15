@@ -2,8 +2,8 @@ const Product = require("../models").Product;
 
 const addProducts = async (req, res) => {
   try {
-    const { nombre, precio, id_categoria, descripcion } = req.body;
-    const user = await Product.create({ nombre, precio, id_categoria, descripcion }); 
+    const { nombre, precio, image, modelo, id_categoria, descripcion } = req.body;
+    const user = await Product.create({ nombre, precio, image,  modelo, id_categoria, descripcion }); 
     res.json({ msg: "Producto agregado exitosamente", data: user });
   } catch (error) {
     console.log(error)

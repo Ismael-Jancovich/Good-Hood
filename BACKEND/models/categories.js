@@ -15,9 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     id_categoria: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
-    nombre: DataTypes.STRING(100)
+    nombre: {
+      type: DataTypes.STRING(100),
+      allowNull: false 
+    }
   }, {
     sequelize,
     modelName: 'categories',

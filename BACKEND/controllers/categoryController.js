@@ -1,9 +1,9 @@
-const Category = require('../models/categories');
+const Category = require("../models").categories;
 
 const getAllCategories = async (req, res) => {
   try {
     const categories = await Category.findAll({
-      attributes: ["id_category", "name"],
+      attributes: ["id_categoria", "name"], // Cambiado aquí
     });
     res.json({ data: categories });
   } catch (error) {
@@ -12,36 +12,39 @@ const getAllCategories = async (req, res) => {
   }
 };
 
+
 const getCategoryById = async (req, res) => {
   try {
-    const { idCategoria } = req.params;
-    const category = await Category.findByPk(idCategoria);
+    const { id_categoria } = req.params;
+    const category = await Category.findByPk(id_categoria);
     return res.json(category);
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Error inesperado en el servidor" });
   }
 };
-
 const createCategory = async (req, res) => {
   try {
-    const { nombre } = req.body;
-    const newCategory = await Category.create({ nombre });
-    return res.status(201).json({ message: "Categoria creada correctamente", data: newCategory });
+    const { name } = req.body;
+    const newCategory =  Category.create({ nombre: name });
+    return res
+      .status(201)
+      .json({ message: "Categoria creada correctamente", data: newCategory });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error inesperado en el servidor" });
   }
 };
 
+
 const updateCategory = async (req, res) => {
   const oldCategory = req.body;
-  const { idCategoria } = req.params;
+  const { id_categoria } = req.params;
 
   try {
-    await Category .update(
+    await Category.update(
       {
-        name: oldCategory.nombre,
+        name: oldCategory.name,
       },
       {
         where: {
@@ -59,11 +62,11 @@ const updateCategory = async (req, res) => {
 };
 
 const deleteCategory = async (req, res) => {
-  const { idCategoria } = req.params;
+  const { id_categoria } = req.params;
   try {
     await Category.destroy({
       where: {
-        id: idCategoria,
+        id: id_categoria,
       },
     });
     return res.json({

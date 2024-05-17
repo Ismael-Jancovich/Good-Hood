@@ -35,7 +35,7 @@ height: 15px;
 const Hombre = () => {
   const [products, setProduct] = useState([])
   async function initialData() {
-    await fetch("http://localhost:3000/products/")
+    await fetch('http://localhost:3000/products?limit=12&gender=Hombre')
       .then(res => res.json())
       .then(res => setProduct(res.data))
       .catch(res => console.log(res))

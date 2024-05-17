@@ -1,9 +1,11 @@
+const { where } = require("sequelize");
+
 const Product = require("../models").Product;
 
 const addProducts = async (req, res) => {
   try {
     const { nombre, precio, image, modelo, id_categoria, descripcion } = req.body;
-    const user = await Product.create({ nombre, precio, image,  modelo, id_categoria, descripcion }); 
+    const user = await Product.create({ nombre, precio, image, modelo, id_categoria, descripcion });
     res.json({ msg: "Producto agregado exitosamente", data: user });
   } catch (error) {
     console.log(error)
@@ -11,7 +13,18 @@ const addProducts = async (req, res) => {
 }
 
 const getProducts = async (req, res) => {
-  const products = await Product.findAll();
+  const { gender } = req.query
+  const query = {}
+  if (gender) {
+    query.where = {
+        modelo: gender
+    }
+  }
+  console.log(query);
+  const products = await Product.findAll({
+    ...query,
+    limit: Number(req.query.limit)
+  });
   res.json({ msg: "Productos", data: products });
 }
 
@@ -38,8 +51,9 @@ const deleteProduct = async (req, res) => {
   res.json({ msg: "Producto eliminado correctamente" });
 }
 module.exports = {
-   addProducts,
-   getProducts,
-    getProductById, 
-    updateProduct,
-     deleteProduct };
+  addProducts,
+  getProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct
+};

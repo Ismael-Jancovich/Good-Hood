@@ -8,7 +8,8 @@ import Mujer from "./src/pages/mujer"
 import Niño from "./src/pages/niño-a"
 import Login from "./src/pages/login"
 import Register from "./src/pages/register"
-
+import Cart from "./src/pages/cart";
+import ProductDetail from "./src/pages/productDetail";
 
 function App() {
     return (
@@ -21,6 +22,9 @@ function App() {
     <Route path="/niño-a" element={<Niño />} />
     <Route path="/login" element={<Login />} />
     <Route path="/register" element={<Register />} />
+    <Route path="/cart" element={<Cart />} />
+    <Route path="/products/:id_product" element={<ProductDetail />} />
+
   </Routes>
         <Footer />
       </>

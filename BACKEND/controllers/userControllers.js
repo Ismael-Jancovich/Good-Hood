@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 
 async function createUser(req, res) {
   const newUser = req.body;
+  console.log(newUser);
   try{
    const hashedPassword = await bcrypt.hash(newUser.contraseña, 10);
    await User.create({...newUser, contraseña: hashedPassword});
@@ -12,6 +13,24 @@ async function createUser(req, res) {
     res.status(500).json({message: 'Error inesperado en el servidor'})
   };
 }
+
+const loginUser = async(req, res) => {
+  const {mail, contraseña} = req.body;
+  try {
+      const user = await User.findOne({where: {mail} });
+      if (!user) {
+          return res.status(404).json({message: "Usuario no encontrado"});
+      }
+      const isPasswordValid = await bcrypt.compare(contraseña, user.contraseña);
+      if (!isPasswordValid) {
+          return res.status(400).json({message: "Contraseña incorrecta"})
+      }   
+      res.json({message: "Usuario logeado correctamente"})
+  } catch (error) {
+      console.error(error);
+      res.status(500).json ({message: "Error inesperado en el servidor"})
+  }
+};
 
 function getAllUsers(req, res) {
   const users = User.findAll();
@@ -48,4 +67,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  loginUser
 };

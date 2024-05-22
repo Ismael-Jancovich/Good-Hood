@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import { FaInstagram } from "react-icons/fa6";
@@ -12,7 +13,6 @@ align-items: center;
 background-color: #afc2d9;
 `;
 
-
 const LoginCoitaner = styled.section`
 .Content{
   width: 800px;
@@ -23,7 +23,7 @@ const LoginCoitaner = styled.section`
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
-};
+}
 
 .Logo_titulo{
   display: flex;
@@ -42,11 +42,10 @@ h1{
   font-size: 50px;
 }
 
-
 form{
-display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 input{
@@ -64,51 +63,97 @@ button{
 
 a{
   text-decoration: none;
- font-size: 20px;
-color: black;
+  font-size: 20px;
+  color: black;
 }
-`
-
+`;
 
 const Networks = styled.div`
 color: black;
-font-size: 150px ;
+font-size: 150px;
 width: 185px;
 display: flex;  
 margin-top: 30px;
-`
+`;
 
 const Login = () => {
+  const [password, setPassword] = useState("");
+  const [mail, setMail] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const data = {
+      mail: mail,
+      contraseña: password,
+    };
+    console.log(data);
+    fetch("http://localhost:3000/usuario/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          return response.json().then((err) => {
+            throw new Error(err.message || "Error en el inicio de sesión");
+          });
+        }
+        return response.json();
+      })
+      .then((result) => {
+        console.log(result);
+        navigate("/"); 
+      })
+      .catch((error) => {
+        console.error("Error en el inicio de sesión:", error);
+        alert(error.message);
+      });
+  };
+
+  useEffect(() => { }, []);
+
   return (
     <BodyCointaner>
       <LoginCoitaner>
         <section className='Content'>
           <section className="Logo_titulo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8sTNg_Wuf6Ze67SqR4m4kzy5erMo5S89LMBwQBDEiA&s" alt="" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8sTNg_Wuf6Ze67SqR4m4kzy5erMo5S89LMBwQBDEiA&s" alt="Good Hood Logo" />
             <h1>GOOD HOOD</h1>
           </section>
-          <form action="/login" method="get">
-            <input type="email" name="myInput" placeholder="your@email.com" required />
-            <input type="password" name="myInput" placeholder="*************" required />
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              onChange={(e) => {(e.target.value);}}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="*************"
+              required
+              onChange={(e) => {setPassword(e.target.value);}}
+            />
             <button type="submit">Enviar</button>
           </form>
           <section className="enlaces">
-
             <Link to={`/register`} className="menu">
-              <a href="">Registrarse</a>
+              Registrarse
             </Link>
           </section>
           <Networks>
-            < FaInstagram />
-            < FaFacebookSquare />
-            < FaWhatsapp />
+            <FaInstagram />
+            <FaFacebookSquare />
+            <FaWhatsapp />
           </Networks>
-
         </section>
       </LoginCoitaner>
     </BodyCointaner>
+  );
+};
 
-  )
-}
-
-export default Login
+export default Login;

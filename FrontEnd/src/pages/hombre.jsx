@@ -21,15 +21,54 @@ const ContentProducts = styled.div`
   img {
     width: 250px;
     height: 250px;
+    border-radius: 45px 45px 0px 0px;
+    border-bottom: 1px solid black;
   }
 `;
 
-const CartNavbar = styled.div`
-  display: flex;
-  align-items: center;
+const Tarjeta = styled.div`
+  width: 250px;
+  background-color: white;
+  margin-top: 30px;
+  margin bottom: 30px;
+  border-radius: 15%;
+  border: 2px solid black;
+
+h2{
   font-size: 20px;
-  height: 15px;
-`;
+}
+
+
+p{
+  font-size: 20px;
+}
+
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+
+    a{
+      text-decoration: none;
+      color: black;
+      margin-right: 15px;
+    }
+
+    button{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 70px;
+    }
+  }
+
+
+`
 
 const Hombre = () => {
   const { add } = useCart();
@@ -51,13 +90,17 @@ const Hombre = () => {
       <FilterCategory />
       <ContentProducts>
         {products.map((p) => (
-          <div className="tarjeta box-1" key={p.id}>
-            <img className="img" src={p.image} alt={`Perfil de ${p.modelo}`} />
-            <h3>{p.nombre}</h3>
-            <p className="precio">$ {parsePrice(p.precio)}</p>
-            <Link to={`/products/${p.id}`}>Details</Link>
-            <button onClick={() => add(p)}>Add to cart</button>
-          </div>
+          <Tarjeta>
+            <div className="tarjeta" key={p.id_producto}>
+              <img className="img" src={p.image} alt={`Perfil de ${p.modelo}`} />
+              <h2>{p.nombre}</h2>
+              <p className="precio">$ {parsePrice(p.precio)}</p>
+              <div className="buttons">
+                <Link to={`/products/${p.id_producto}`}>Ver mas</Link>
+                <button onClick={() => add(p)}><FaShoppingCart /></button>
+              </div>
+            </div>
+          </Tarjeta>
         ))}
       </ContentProducts>
     </BodyCointaner>

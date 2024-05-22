@@ -9,7 +9,7 @@ const categoryRouter = require("./routes/categoryRoutes")
 app.use(cors());
 app.use(express.static("public"))
 app.use(express.json());
-app.use("/nuevo-usuario", routerUser);
+app.use("/usuario", routerUser);
 app.use("/products", routerProduct);
 app.use("/categorias", categoryRouter);
 

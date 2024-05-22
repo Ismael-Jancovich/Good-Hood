@@ -17,13 +17,15 @@ const NavContainer = styled.nav`
     border-radius: 50%;
     width: 200px;
   }
+
+  @media (min-width: 900px) {
+    img{
+      border-radius: 50%;
+      width: 120px;
+    }
+  }
 `;
 
-const CartNavbar = styled.div`
-display: flex;
-align-items: center;
-font-size: 35px;
-`
 
 const ListContentDesktop = styled.ul`
   display: none;
@@ -50,6 +52,18 @@ const ListContentDesktop = styled.ul`
         transition: 0.5s;
       }
     }
+
+
+    @media (min-width: 900px) {
+      li {
+        line-height: 40px;
+        margin: 0px 15px 0px 0px;
+      }
+        a {
+          font-size: 15px;
+          }
+        }
+    
   }
 `;
 
@@ -149,6 +163,14 @@ function Navbar() {
           </li>
           </Link>
 
+          <li>
+          <Link to={`/cart`} className="menu">
+            <a href="/" className="active">
+              carrito
+            </a>
+            </Link>
+          </li>
+
           <Link to={`/login`} className="menu">
           <li>
             <a href="/">Iniciar sesion</a>
@@ -160,10 +182,6 @@ function Navbar() {
             <a href="/">Registrarse</a>
           </li>
           </Link>
-
-        <CartNavbar>
-          <FaShoppingCart/>
-        </CartNavbar>
 
         </ListContentDesktop>
         <ButtonMenuMobile onClick={handleClick}>

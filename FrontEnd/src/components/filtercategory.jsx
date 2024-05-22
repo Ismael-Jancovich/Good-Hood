@@ -112,6 +112,14 @@ const FilterCategorys = styled.section`
     margin-left: 5px;
     margin-right: 5px;
 }
+
+@media (max-width: 900px){
+    .filter{
+        height: 1500px;
+        width: 250px;
+    };
+}
+
 `
 
 const FilterCategory = () => {

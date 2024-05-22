@@ -33,74 +33,22 @@ const HomeWelcome = styled.div`
 .moda .moda__imagenes img{
     height: 590px
 }
+
+@media (max-width: 900px){
+    .moda{
+        width: 840px;
+        height: 480px;
+    }
+
+    .moda .moda__imagenes img{
+        width: 285px;
+        height: 445px;
+    }
+  }
+
+
 `
 
-const HomeOferts = styled.div`
-.ofertas{
-    margin-top: 50px;
-}
-
-.ofertas h2{
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.carrusel{
-
-    display: flex; 
-    justify-content: space-evenly;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #6ea8e2;
-}
-
-
-
-.botones__compra__oferta button{
-    margin: 5px 10px 0px 0px;
-    width: 80px;
-}
-
-.botones__compra__oferta button ion-icon{
-    font-size: 24px;
-}
-
-.carrusel img {
-    height: 160px;
-}
-
-
-.carrusel_botones{
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.carrusel_botones button{
-    margin-right: 10px;
-}
-
-.carrusel__prendas{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.carrusel__prendas div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-`;
-
-const CartNavbar = styled.div`
-display: flex;
-align-items: center;
-font-size: 35px;
-`
 const TarjetsSection = styled.div`
 .tarjetas{
     display: flex;
@@ -132,6 +80,22 @@ const TarjetsSection = styled.div`
     display: flex;
     justify-content: center;
 }
+
+
+@media (max-width: 900px){
+    .tarjetas div{
+        margin-left: 50px;
+    }
+
+    .tarjetas img {
+        width: 245px;
+        height: 370px;
+    }
+
+  }
+
+
+
 `;
 
 const Home = () => {

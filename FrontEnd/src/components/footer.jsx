@@ -27,6 +27,11 @@ links   {
   }
 }
 
+@media (max-width: 900px){
+    p{
+        font-size: 20px;
+    }
+  }
 
 `
 
@@ -55,6 +60,15 @@ display: flex;
 ul{
     margin-left: 50px;
 }
+
+@media (max-width: 900px){
+    ul{
+        margin-left: 25px;
+    }
+  }
+
+
+
 `
 
 

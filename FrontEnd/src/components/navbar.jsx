@@ -18,7 +18,7 @@ const NavContainer = styled.nav`
     width: 200px;
   }
 
-  @media (min-width: 900px) {
+  @media (max-width: 900px) {
     img{
       border-radius: 50%;
       width: 120px;
@@ -54,14 +54,14 @@ const ListContentDesktop = styled.ul`
     }
 
 
-    @media (min-width: 900px) {
+    @media (max-width: 900px) {
       li {
         line-height: 40px;
         margin: 0px 15px 0px 0px;
       }
-        a {
-          font-size: 15px;
-          }
+a{
+  font-size: 15px;
+}
         }
     
   }
@@ -137,50 +137,50 @@ function Navbar() {
     <>
       <NavContainer>
         <div>
-        <Link to={`/`} className="menu">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8sTNg_Wuf6Ze67SqR4m4kzy5erMo5S89LMBwQBDEiA&s" alt="logo de la pagina" />
+          <Link to={`/`} className="menu">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8sTNg_Wuf6Ze67SqR4m4kzy5erMo5S89LMBwQBDEiA&s" alt="logo de la pagina" />
           </Link>
-          </div>
+        </div>
         <ListContentDesktop>
 
           <li>
-          <Link to={`/hombre`} className="menu">
-            <a href="/" className="active">
-              Hombre
-            </a>
+            <Link to={`/hombre`} className="menu">
+              <a href="/" className="active">
+                Hombre
+              </a>
             </Link>
           </li>
 
           <Link to={`/mujer`} className="menu">
-          <li>
-            <a href="/">Mujer</a>
-          </li>
+            <li>
+              <a href="/">Mujer</a>
+            </li>
           </Link>
 
           <Link to={`/niño-a`} className="menu">
-          <li>
-            <a href="/">Niño/a</a>
-          </li>
+            <li>
+              <a href="/">Niño/a</a>
+            </li>
           </Link>
 
           <li>
-          <Link to={`/cart`} className="menu">
-            <a href="/" className="active">
-              carrito
-            </a>
+            <Link to={`/cart`} className="menu">
+              <a href="/" className="active">
+                carrito
+              </a>
             </Link>
           </li>
 
           <Link to={`/login`} className="menu">
-          <li>
-            <a href="/">Iniciar sesion</a>
-          </li>
+            <li>
+              <a href="/">Iniciar sesion</a>
+            </li>
           </Link>
-          
+
           <Link to={`/register`} className="menu">
-          <li>
-            <a href="/">Registrarse</a>
-          </li>
+            <li>
+              <a href="/">Registrarse</a>
+            </li>
           </Link>
 
         </ListContentDesktop>
@@ -202,8 +202,8 @@ function Navbar() {
           </li>
           <li>
             <a href="/about">
-            Niño/a
-              </a>
+              Niño/a
+            </a>
           </li>
           <li>
             <a href="/" className="active">
@@ -226,4 +226,4 @@ function Navbar() {
   );
 }
 
-  export default Navbar
+export default Navbar

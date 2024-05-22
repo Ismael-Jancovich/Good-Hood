@@ -17,6 +17,7 @@ const ContentProducts = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 100px;
   margin-left: 30px;
+  margin-bottom: 30px;
 
   img {
     width: 250px;
@@ -24,6 +25,23 @@ const ContentProducts = styled.div`
     border-radius: 45px 45px 0px 0px;
     border-bottom: 1px solid black;
   }
+
+  @media (max-width: 900px){
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 45px 45px 0px 0px;
+      border-bottom: 1px solid black;
+    }
+  }
+
+
 `;
 
 const Tarjeta = styled.div`
@@ -66,6 +84,8 @@ p{
       width: 70px;
     }
   }
+
+  
 
 
 `

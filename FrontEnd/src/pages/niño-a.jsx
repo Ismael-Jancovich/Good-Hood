@@ -17,6 +17,7 @@ const ContentProducts = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 100px;
   margin-left: 30px;
+  margin-bottom: 30px;
 
   img {
     width: 250px;

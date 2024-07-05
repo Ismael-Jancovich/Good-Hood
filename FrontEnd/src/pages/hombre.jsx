@@ -48,7 +48,7 @@ const Tarjeta = styled.div`
   width: 250px;
   background-color: white;
   margin-top: 30px;
-  margin bottom: 30px;
+  margin-bottom: 30px;
   border-radius: 15%;
   border: 2px solid black;
 
@@ -110,7 +110,7 @@ const Hombre = () => {
       <FilterCategory />
       <ContentProducts>
         {products.map((p) => (
-          <Tarjeta>
+          <Tarjeta key={p.id_producto}>
             <div className="tarjeta" key={p.id_producto}>
               <img className="img" src={p.image} alt={`Perfil de ${p.modelo}`} />
               <h2>{p.nombre}</h2>

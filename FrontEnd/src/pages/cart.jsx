@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import useCart from "../../cartStore";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { FaShoppingCart } from "react-icons/fa";
-import FilterCategory from "../components/filtercategory";
 import parsePrice from "../fuctions/parsePrice";
 
 
@@ -13,6 +11,14 @@ const BodyCointaner = styled.div`
   background: #afc2d9;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  .button__buy{
+    width: 430px;
+    height: 65px;
+    margin-bottom: 30px;
+  }
+  
 `;
 
 const ContentProducts = styled.div`
@@ -91,11 +97,7 @@ const Tarjeta = styled.div`
 
 const Cart = () => {
   const { cart, remove, decreaseOne } = useCart();
-  const [formCustomer, setFormCustomer] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -136,35 +138,8 @@ const Cart = () => {
             ))}
           </Tarjeta>
         </ContentProducts>
+        <button className="button__buy">Buy</button>
       </BodyCointaner>
-
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={formCustomer.name}
-          onChange={(e) =>
-            setFormCustomer({ ...formCustomer, name: e.target.value })
-          }
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={formCustomer.email}
-          onChange={(e) =>
-            setFormCustomer({ ...formCustomer, email: e.target.value })
-          }
-        />
-        <input
-          type="tel"
-          placeholder="Phone"
-          value={formCustomer.phone}
-          onChange={(e) =>
-            setFormCustomer({ ...formCustomer, phone: e.target.value })
-          }
-        />
-        <button>Buy</button>
-      </form>
     </div>
   );
 };

@@ -5,90 +5,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import FilterCategory from "../components/filtercategory";
 import parsePrice from "../fuctions/parsePrice";
 import useCart from "../../cartStore";
-
-const BodyCointaner = styled.div`
-  display: flex;
-  align-items: center;
-  background: #afc2d9;
-`;
-
-const ContentProducts = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 100px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-
-  img {
-    width: 250px;
-    height: 250px;
-    border-radius: 45px 45px 0px 0px;
-    border-bottom: 1px solid black;
-  }
-
-  @media (max-width: 900px){
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 35px;
-    margin-left: 15px;
-    margin-bottom: 15px;
+import {BodyCointaner, ContentProducts, Tarjeta} from '../styles/hombre'
 
 
-    img {
-      width: 200px;
-      height: 200px;
-      border-radius: 45px 45px 0px 0px;
-      border-bottom: 1px solid black;
-    }
-  }
-
-
-`;
-
-const Tarjeta = styled.div`
-  width: 250px;
-  background-color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 15%;
-  border: 2px solid black;
-
-h2{
-  font-size: 20px;
-}
-
-
-p{
-  font-size: 20px;
-}
-
-  div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .buttons{
-    display: flex;
-    flex-direction: row;
-
-    a{
-      text-decoration: none;
-      color: black;
-      margin-right: 15px;
-    }
-
-    button{
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: 70px;
-    }
-  }
-
-  
-
-
-`
 
 const Hombre = () => {
   const { add } = useCart();
